@@ -58,6 +58,7 @@ public class DataEntry extends javax.swing.JFrame
         sResult = new javax.swing.JLabel();
         nLbl = new javax.swing.JLabel();
         nResult = new javax.swing.JLabel();
+        zScore = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -171,6 +172,15 @@ public class DataEntry extends javax.swing.JFrame
         nResult.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         nResult.setText("N");
 
+        zScore.setText("Z-Score Analysis");
+        zScore.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                zScoreActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -197,27 +207,30 @@ public class DataEntry extends javax.swing.JFrame
                                     .addComponent(editValue, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))))
                 .addGap(58, 58, 58)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sLbl)
-                    .addComponent(meanLbl)
-                    .addComponent(nLbl)
-                    .addComponent(maxLbl)
-                    .addComponent(minLbl)
-                    .addComponent(q1Lbl)
-                    .addComponent(medLbl)
-                    .addComponent(q3Lbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sResult)
-                    .addComponent(meanResult)
-                    .addComponent(maxResult)
-                    .addComponent(minResult)
-                    .addComponent(q1Result)
-                    .addComponent(medResult)
-                    .addComponent(q3Result)
-                    .addComponent(nResult))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sLbl)
+                            .addComponent(meanLbl)
+                            .addComponent(nLbl)
+                            .addComponent(maxLbl)
+                            .addComponent(minLbl)
+                            .addComponent(q1Lbl)
+                            .addComponent(medLbl)
+                            .addComponent(q3Lbl))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sResult)
+                            .addComponent(meanResult)
+                            .addComponent(maxResult)
+                            .addComponent(minResult)
+                            .addComponent(q1Result)
+                            .addComponent(medResult)
+                            .addComponent(q3Result)
+                            .addComponent(nResult)))
+                    .addComponent(zScore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -251,29 +264,32 @@ public class DataEntry extends javax.swing.JFrame
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(editValue, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButton4)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(minResult)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(q1Result)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(medResult)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(q3Result)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(maxResult))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(nLbl)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(minLbl)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(q1Lbl)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(medLbl)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(q3Lbl)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(maxLbl)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(minResult)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(q1Result)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(medResult)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(q3Result)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(maxResult))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(nLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(minLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(q1Lbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(medLbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(q3Lbl)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(maxLbl)))
+                                .addGap(18, 18, 18)
+                                .addComponent(zScore))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -467,6 +483,11 @@ public class DataEntry extends javax.swing.JFrame
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void zScoreActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_zScoreActionPerformed
+    {//GEN-HEADEREND:event_zScoreActionPerformed
+        
+    }//GEN-LAST:event_zScoreActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -538,5 +559,6 @@ public class DataEntry extends javax.swing.JFrame
     private javax.swing.JLabel q3Result;
     private javax.swing.JLabel sLbl;
     private javax.swing.JLabel sResult;
+    private javax.swing.JButton zScore;
     // End of variables declaration//GEN-END:variables
 }

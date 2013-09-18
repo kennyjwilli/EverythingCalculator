@@ -54,28 +54,33 @@
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="sLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="meanLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="nLbl" min="-2" max="-2" attributes="0"/>
-                  <Component id="maxLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="minLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="q1Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="medLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="q3Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jSeparator1" min="-2" pref="18" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="sResult" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="meanResult" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="maxResult" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="minResult" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="q1Result" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="medResult" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="q3Result" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="nResult" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="sLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="meanLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="nLbl" min="-2" max="-2" attributes="0"/>
+                          <Component id="maxLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="minLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="q1Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="medLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="q3Lbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jSeparator1" min="-2" pref="18" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="sResult" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="meanResult" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="maxResult" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="minResult" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="q1Result" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="medResult" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="q3Result" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="nResult" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="zScore" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -120,31 +125,35 @@
                                   <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="minResult" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="q1Result" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="medResult" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="q3Result" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="maxResult" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="minResult" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="q1Result" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="medResult" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="q3Result" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="maxResult" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="nLbl" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="minLbl" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="q1Lbl" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="medLbl" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="q3Lbl" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="maxLbl" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="nLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="minLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="q1Lbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="medLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="q3Lbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="maxLbl" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="zScore" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -378,6 +387,14 @@
         </Property>
         <Property name="text" type="java.lang.String" value="N"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="zScore">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Z-Score Analysis"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="zScoreActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
